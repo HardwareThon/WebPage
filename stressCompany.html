@@ -87,7 +87,7 @@
 			<hr>
 			
 		<!-- One -->
-			<section id="one" class="main style1">
+			<section id="one" class="main style1" style="margin-top:-10%">
 				<div class="container">
 						 <div id="chart_div" style="width: 100%; height: 500px;"></div>
                          <div id="chart_pulse" style="width: 100%; height: 500px;"></div>
@@ -97,13 +97,8 @@
 			</section>
 
 	
-
-		
-			
-		
 		<!-- Footer -->
 			<section id="footer">
-				
 				<ul class="icons">
 					<li><a href="#" class="icon alt fa-twitter" ><span class="label">Twitter</span></a></li>
 					<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
@@ -125,6 +120,12 @@
 			<script src="assets/js/main.js"></script>
 
 			<script>
+				function showHide(pShow,pHide1,pHide2,pHide3){
+					$('#' + pShow).show();
+					$('#' + pHide1).hide();
+					$('#' + pHide2).hide();
+					$('#' + pHide3).hide();
+				}
 				$(function() {
 					$("li a").click(function() {
 						// remove classes from all
@@ -134,31 +135,19 @@
 					});
 
 					$("#estressControlado").click(function() {
-						$('#chart_div').show();
-						$('#chart_pulse').hide();
-						$('#chart_brain').hide();
-						$('#chart_voz').hide();
+						showHide("chart_div","chart_pulse","chart_brain", "chart_voz");
 					});
 
 					$("#pulsoCardiaco").click(function() {
-						$('#chart_div').hide();
-						$('#chart_pulse').show();
-						$('#chart_brain').hide();
-						$('#chart_voz').hide();
+						showHide("chart_pulse","chart_div","chart_brain", "chart_voz");
 					});
 
 					$("#ondasCerebrales").click(function() {
-						$('#chart_div').hide();
-						$('#chart_pulse').hide();
-						$('#chart_brain').show();
-						$('#chart_voz').hide();
+						showHide("chart_brain","chart_div","chart_pulse", "chart_voz");
 					});
 
 					$("#emociones").click(function() {
-						$('#chart_div').hide();
-						$('#chart_pulse').hide();
-						$('#chart_brain').hide();
-						$('#chart_voz').show();
+						showHide("chart_voz","chart_div","chart_pulse", "chart_brain");
 					});
 				});
 
