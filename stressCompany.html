@@ -53,9 +53,9 @@
 				<div class="form-group col-md-5 offset-md-1">
 						<label for="inputDeparment">Departamento</label>
 						<select id="inputDeparment" class="form-control">
-						<option selected>Seleccionar...</option>
-						<option>Informática</option>
-						<option>Recursos Humanos</option>
+							<option value="0" selected>Seleccionar...</option>
+							<option value="1">Informática</option>
+							<option value="2">Recursos Humanos</option>
 						</select>
 				</div>
 				<div class="form-group col-md-2">
@@ -80,7 +80,7 @@
 				</div>
 				<div class="col-md-1">
 						<ul class="actions special" style="margin-top:20%">
-								<a href="#navNE" class="button scrolly btn">Buscar</a>
+								<a href="#navNE" class="button scrolly btn" id="btnBuscar">Buscar</a>
 						</ul>
 				</div>
 			</div>\
@@ -119,40 +119,7 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-			<script>
-				function showHide(pShow,pHide1,pHide2,pHide3){
-					$('#' + pShow).show();
-					$('#' + pHide1).hide();
-					$('#' + pHide2).hide();
-					$('#' + pHide3).hide();
-				}
-				$(function() {
-					$("li a").click(function() {
-						// remove classes from all
-						$("li a").removeClass("active");
-						// add class to the one we clicked
-						$(this).addClass("active");
-					});
-
-					$("#estressControlado").click(function() {
-						showHide("chart_div","chart_pulse","chart_brain", "chart_voz");
-					});
-
-					$("#pulsoCardiaco").click(function() {
-						showHide("chart_pulse","chart_div","chart_brain", "chart_voz");
-					});
-
-					$("#ondasCerebrales").click(function() {
-						showHide("chart_brain","chart_div","chart_pulse", "chart_voz");
-					});
-
-					$("#emociones").click(function() {
-						showHide("chart_voz","chart_div","chart_pulse", "chart_brain");
-					});
-				});
-
-				
-			</script>
+			
 	 <script type="text/javascript">
 		$(function () {
 			$('#datetimepicker1').datetimepicker();
@@ -171,6 +138,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-	<script type="text/javascript" src="assets/js/Analizer.js"></script>
+	<script type="text/javascript" src="assets/js/AnalizerC.js"></script>
+
+	<script>
+			function showHide(pShow,pHide1,pHide2,pHide3){
+				$('#' + pShow).show();
+				$('#' + pHide1).hide();
+				$('#' + pHide2).hide();
+				$('#' + pHide3).hide();
+			}
+			$(function() {
+				$("li a").click(function() {
+					// remove classes from all
+					$("li a").removeClass("active");
+					// add class to the one we clicked
+					$(this).addClass("active");
+				});
+
+				$("#estressControlado").click(function() {
+					showHide("chart_div","chart_pulse","chart_brain", "chart_voz");
+				});
+
+				$("#pulsoCardiaco").click(function() {
+					showHide("chart_pulse","chart_div","chart_brain", "chart_voz");
+				});
+
+				$("#ondasCerebrales").click(function() {
+					showHide("chart_brain","chart_div","chart_pulse", "chart_voz");
+				});
+
+				$("#emociones").click(function() {
+					showHide("chart_voz","chart_div","chart_pulse", "chart_brain");
+				});
+
+				$("#btnBuscar").click(function() {
+					google.charts.setOnLoadCallback(drawChart);
+				});
+			});
+
+			
+		</script>
 
 </html>

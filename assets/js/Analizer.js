@@ -3,10 +3,11 @@
       google.charts.setOnLoadCallback(drawChart);
       
       function drawChart() {
-      var chartB = new google.visualization.AreaChart(document.getElementById('chart_brain'));
-      var chartP = new google.visualization.AreaChart(document.getElementById('chart_pulse'));
-      var chartV = new google.visualization.AreaChart(document.getElementById('chart_voz'));
-      var chart1 = new google.visualization.AreaChart(document.getElementById('chart_div'));
+            
+            var chartB = new google.visualization.AreaChart(document.getElementById('chart_brain'));
+            var chartP = new google.visualization.AreaChart(document.getElementById('chart_pulse'));
+            var chartV = new google.visualization.AreaChart(document.getElementById('chart_voz'));
+            var chart1 = new google.visualization.AreaChart(document.getElementById('chart_div'));
             var myObj, i,counter=0,temp,temp2=0, x=[['Hora', 'Pulso Cardiaco']],y=[['Hora', 'Furia', 'Desagrado','Temor', 'Alegría', 'Tristeza']],z=[['Hora', 'Onda Cerebral']],p=[['Medición', 'Estrés']];
             var xE=[],yE=[],zE=[],pE=[];
     
