@@ -10,6 +10,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 
@@ -23,10 +25,15 @@
 		<!-- Header -->
 			<section id="header">
 			
-
+      <div style="margin-left:80%;" >
+        <h4 class="text-left">Nombre  : Cristian</h4>
+        <h4 class="text-left">Departamento  : Informática</h4>
+        <h4 class="text-left">Puesto  : Desarrollador</h4>
+      </div>
 				
 				<div class="inner">
 						<span ><img src="images/logo.png" alt="" height="150" width="250"  /></span>
+
 							 <h1><strong>Niveles De Estrés</strong></h1>
                     <p> (1) Estrés Controlado</p>
                     <p> (2) Estrés Riesgoso</p>
@@ -54,40 +61,42 @@
             <a class="nav-link" href="#bnavNE" id="emociones">Emociones</a>
         </li>
       </ul>
+      <hr>
+      <br>
+
+      <div class="form-row">
+
+        <div class="form-group col-md-2 offset-md-3">
+            <label for="inputDeparment">Fecha Inicio</label>
+            <div class='input-group date' id='datetimepicker1'>
+              <input type='text' class="form-control" />
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+              
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputDeparment">Fecha Fin</label>
+            <div class='input-group date' id='datetimepicker2'>
+              <input type='text' class="form-control" />
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+              
+        </div>
+        <div class="col-md-1 " style="margin-left:2%">
+            <ul class="actions special" style="margin-top:25%">
+                <a href="#navNE" class="button wide primary">Buscar</a>
+            </ul>
+        </div>
+      </div>
+      <hr>
 
 		<!-- One -->
-			<section id="one" class="main style1">
-				<div class="container">
-              <div class="row">
-                  <div class='col-xs-3'>
-                      <div class="form-group">
-                          <div class='input-group date' id='datetimepicker1'>
-                              <input type='text' class="form-control" />
-                              <span class="input-group-addon">
-                                  <span class="glyphicon glyphicon-calendar"></span>
-                              </span>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col-xs-3">
-                    <div class="form-group">
-                      <a href="#" class="button wide primary">ANALIZAR</a>
-                    </div>
-                  </div>
-
-                   <div class='col-xs-3'>
-                      <div class="form-group">
-                          <div class='input-group date' id='datetimepicker2'>
-                              <input type='text' class="form-control" />
-                              <span class="input-group-addon">
-                                  <span class="glyphicon glyphicon-calendar"></span>
-                              </span>
-                          </div>
-                      </div>
-                  </div>
-
-              </div>
+			<section id="one" class="main style1" >
+				<div class="container" >
 						 <div id="chart_div" style="width: 100%; height: 500px;"></div>
                          <div id="chart_pulse" style="width: 100%; height: 500px;"></div>
                          <div id="chart_brain" style="width: 100%; height: 500px;"></div>
@@ -161,33 +170,27 @@
           });
         });
       </script>
-
-	
-	</body>
-
-     <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-    <script type="text/javascript" src="assets/js/Analizer.js"></script>
     <script type="text/javascript">
         $(function () {
             $('#datetimepicker1').datetimepicker();
             $('#datetimepicker2').datetimepicker();
         });
     </script>
+	
+	</body>
+
+
+   <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="assets/js/Analizer.js"></script>
+
 </html>
