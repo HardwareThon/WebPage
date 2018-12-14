@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<!--
+	Photon by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>HardwareThon2018StressEmployee</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<div class="inner">
+						<span><img src="images/logo.png" alt="" height="150" width="250"  /></span>
+						<ul class="actions special">
+								<a href="#navNE" class="button scrolly">Analizar</a>
+						</ul>
+				</div>
+
+
+				<h1><strong>Niveles De Estrés</strong></h1>
+				
+				
+			</section>
+			<br>
+			<ul class="nav nav-tabs" style="margin-left:25%;margin-right:25%;" id="navNE">
+				<li class="nav-item">
+					<a class="nav-link active" href="#bnavNE" id="estressControlado">Estrés Controlado</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#bnavNE" id="pulsoCardiaco">Pulso Cardiaco</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#bnavNE" id="ondasCerebrales">Ondas Cerebrales</a>
+				</li>
+				<li class="nav-item">
+						<a class="nav-link" href="#bnavNE" id="emociones">Emociones</a>
+				</li>
+			</ul>
+		
+			
+		<!-- One -->
+			<section id="one" class="main style1">
+				<div class="container">
+						 <div id="chart_div" style="width: 100%; height: 500px;"></div>
+                         <div id="chart_pulse" style="width: 100%; height: 500px;"></div>
+                         <div id="chart_brain" style="width: 100%; height: 500px;"></div>
+                         <div id="chart_voz" style="width: 100%; height: 500px;"></div>
+				</div>
+			</section>
+
+	
+
+		
+			
+		
+		<!-- Footer -->
+			<section id="footer">
+				
+				<ul class="icons">
+					<li><a href="#" class="icon alt fa-twitter" ><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; WEB</li><li>Equipo:<a href="#" class="icon">B-Wave</a></li>
+				</ul>
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<script>
+				$(function() {
+					$("li a").click(function() {
+						// remove classes from all
+						$("li a").removeClass("active");
+						// add class to the one we clicked
+						$(this).addClass("active");
+					});
+
+					$("#estressControlado").click(function() {
+						$('#chart_div').show();
+						$('#chart_pulse').hide();
+						$('#chart_brain').hide();
+						$('#chart_voz').hide();
+					});
+
+					$("#pulsoCardiaco").click(function() {
+						$('#chart_div').hide();
+						$('#chart_pulse').show();
+						$('#chart_brain').hide();
+						$('#chart_voz').hide();
+					});
+
+					$("#ondasCerebrales").click(function() {
+						$('#chart_div').hide();
+						$('#chart_pulse').hide();
+						$('#chart_brain').show();
+						$('#chart_voz').hide();
+					});
+
+					$("#emociones").click(function() {
+						$('#chart_div').hide();
+						$('#chart_pulse').hide();
+						$('#chart_brain').hide();
+						$('#chart_voz').show();
+					});
+				});
+			</script>
+	
+	</body>
+   <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript" src="assets/js/Analizer.js"></script>
+
+</html>
